@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JjUntitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKTUTAS Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.postimg.cc/d1S2ZNtF/images.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+        .login-container {
+            background: semi-transperant;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        #message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>CKT UTAS SoNM</h1>
+        <p>Are you a nursing students who has problems compiling or finding your slides? Come, follow me as I link you up with my boss, Bandi Gee, from UG Linkit media and tech.</p>
+        <form id="loginForm">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p id="message"></p> <!-- Message displayed after login attempt -->
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const password = document.getElementById('password').value; // Get the entered password
+            const correctPassword = 'YOUR_PASSWORD_HERE'; // Replace with your actual password
+            const messageElement = document.getElementById('message'); // Element to display messages
+
+            if (password === correctPassword) {
+                messageElement.textContent = 'Correct password! Redirecting...'; // Message for correct password
+                messageElement.style.color = 'green'; // Change message color to green
+                setTimeout(() => {
+                    window.location.href = 'https://yourwebsite.com/access-page.html'; // Replace with the actual URL of your access page
+                }, 2000); // Redirect after 2 seconds
+            } else {
+                messageElement.textContent = 'Incorrect password!'; // Message for incorrect password
+                messageElement.style.color = 'red'; // Change message color to red
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
